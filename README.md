@@ -1,0 +1,2 @@
+# GUI_Sample
+Pythonのtkinterを使用したGUIサンプルです
