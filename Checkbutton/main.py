@@ -1,9 +1,7 @@
 import tkinter as tk
 
-def button_click(sender : tk.Button):
-    sender.configure(text="clicked!")
-
-
+def myCommand():
+    print("myCommand!")
 
 # rootメインウインドウの設定
 root = tk.Tk()
@@ -15,10 +13,16 @@ frame = tk.Frame(root)
 frame.pack(padx=20,pady=10)
 
 # 各種ウィジェットの作成
-check_button = tk.Checkbutton(frame, text="CheckButton")
+stv = tk.StringVar()
+stv.set("0")
+check_button = tk.Checkbutton(frame, text="CheckButton", command=myCommand, variable=stv)
+
+button = tk.Button(frame, text="Button", command=lambda:print(stv.get()))
+
 
 # 各種ウィジェットの設置
 check_button.pack(pady=20)
+button.pack()
 
 # メインループ
 root.mainloop()
