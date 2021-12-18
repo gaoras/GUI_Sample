@@ -1,0 +1,8 @@
+#vs codeの設定ファイル
+.vscode
+
+#ビルド時の出力ファイル
+__pycache__
+build
+dist
+.spec
